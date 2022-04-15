@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>  
+    <title>LOGIN</title>
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Montserrat|Quicksand&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+    <body>
+        
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href='website.html'></a>
+            </div>
+            <nav>
+                <a href="./Index.html"><img src="image3.png" alt="logostudent" class="logo"></a>
+                <ul id='MenuItems'>
+                    <li><a href="./Index.html"><button>About Us</button></a></li>
+                    <li><a href='#'>Contact</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                 <input type='text'class='input-field'placeholder='Email Id' required >
+		         <input type='password'class='input-field'placeholder='Enter Password' required>
+                 <input name="rem" type="checkbox" checked="">
+                 <label class="modal-form-label" for="remember" style="color: rgb(214, 205, 205);">Remember me</label> <br><br>
+		         <button type='submit'class='submit-btn' onclick="window.location.href= 'https://deft-klepon-fbee7c.netlify.app/';">Log in</button> <br>
+                 <a style="color: white;" >------------------------OR------------------------</a> <br> <br>
+                 <button type='submit'class='submit-btn' onclick="window.location.href='https://accounts.digilocker.gov.in/signin/smart_v2/5da2e9534d703e83b8b3da6ee5bdc90d--en';"> <img src="image1.png" height ="23px" width="150" alt="digilocker"> </button> <br>
+                 <button type='submit'class='submit-btn' onclick="window.location.href='https://accounts.google.com/ServiceLogin/identifier?service=mail&passive=1209600&osid=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin';"><img src="image4.png" height ="23px" width="150" alt="google sign in"></button>
+                </form>
+		     <form id='register' class='input-group-register'>
+		     <input type='text'class='input-field'placeholder='First Name' required>
+		     <input type='text'class='input-field'placeholder='Last Name ' required>
+		     <input type='email'class='input-field'placeholder='Email Id' required>
+		     <input type='password'class='input-field'placeholder='Enter Password' required>
+		     <input type='password'class='input-field'placeholder='Confirm Password'  required>
+		     <input type='checkbox'class='check-box'><span>I agree to the terms and conditions</span>
+             <button type='submit'class='submit-btn'  onclick="window.location.href= 'https://deft-klepon-fbee7c.netlify.app/';" >Register</button>
+	         </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event)
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
